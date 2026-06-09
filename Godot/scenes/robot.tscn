@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=3 uid="uid://3t6dumudt7w8"]
+
+[ext_resource type="Script" path="res://scripts/robot.gd" id="1_sptlm"]
+[ext_resource type="Texture2D" uid="uid://b2wbc1eeffbcy" path="res://materials/robot_icon.svg" id="2_ay7bq"]
+[ext_resource type="PackedScene" uid="uid://ck3cd8jjuvfj0" path="res://scenes/motion_trail.tscn" id="3_icy46"]
+[ext_resource type="Script" path="res://scripts/input_handler.gd" id="3_vulgj"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_v4k62"]
+radius = 50.0
+
+[node name="Robot" type="CharacterBody2D"]
+up_direction = Vector2(0, 1)
+slide_on_ceiling = false
+script = ExtResource("1_sptlm")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1.19209e-07, 2.38419e-07)
+texture = ExtResource("2_ay7bq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("CircleShape2D_v4k62")
+
+[node name="MotionTrail" parent="." instance=ExtResource("3_icy46")]
+
+[node name="InputHandler" type="Node" parent="."]
+script = ExtResource("3_vulgj")

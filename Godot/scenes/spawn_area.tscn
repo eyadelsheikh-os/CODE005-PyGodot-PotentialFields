@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://bbdv0uaymou53"]
+
+[ext_resource type="Script" path="res://scripts/spawn_area.gd" id="1_wntjy"]
+
+[node name="SpawnArea" type="Node2D"]
+light_mask = 0
+script = ExtResource("1_wntjy")
+
+[node name="Marker1" type="Marker2D" parent="."]
+position = Vector2(-5, -5)
+
+[node name="Marker2" type="Marker2D" parent="."]
+position = Vector2(5, 5)

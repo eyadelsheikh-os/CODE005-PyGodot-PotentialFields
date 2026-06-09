@@ -1,0 +1,92 @@
+[gd_scene load_steps=5 format=3 uid="uid://dhh728q3x5hf1"]
+
+[ext_resource type="PackedScene" uid="uid://3t6dumudt7w8" path="res://scenes/robot.tscn" id="2_1506f"]
+[ext_resource type="PackedScene" uid="uid://bbdv0uaymou53" path="res://scenes/spawn_area.tscn" id="2_i2yvx"]
+[ext_resource type="PackedScene" uid="uid://cnkcwo7bbf86m" path="res://scenes/obstacle_1.tscn" id="3_4nsvk"]
+[ext_resource type="PackedScene" uid="uid://bdu7eibdqdcvk" path="res://scenes/target_1.tscn" id="4_qb0d4"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Robot" parent="." instance=ExtResource("2_1506f")]
+position = Vector2(600, 300)
+
+[node name="Camera2D" type="Camera2D" parent="Robot"]
+zoom = Vector2(0.5, -0.5)
+
+[node name="Obstacles" type="Node2D" parent="."]
+
+[node name="SpawnArea" parent="Obstacles" node_paths=PackedStringArray("target_parent") instance=ExtResource("2_i2yvx")]
+visible = false
+visibility_layer = 0
+scale = Vector2(728.471, 525.61)
+object_to_spawn = ExtResource("3_4nsvk")
+target_parent = NodePath("..")
+spawn_count = 30
+auto_generate_on_ready = true
+
+[node name="Target1" parent="." instance=ExtResource("4_qb0d4")]
+position = Vector2(360, 700)
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(203, 476)
+
+[connection signal="mouse_entered" from="Obstacles/Obstacle1" to="Obstacles/Obstacle1" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Obstacles/Obstacle1" to="Obstacles/Obstacle1" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Obstacles/@Area2D@19217" to="Obstacles/@Area2D@19217" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Obstacles/@Area2D@19217" to="Obstacles/@Area2D@19217" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Obstacles/@Area2D@19218" to="Obstacles/@Area2D@19218" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Obstacles/@Area2D@19218" to="Obstacles/@Area2D@19218" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Obstacles/@Area2D@19219" to="Obstacles/@Area2D@19219" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Obstacles/@Area2D@19219" to="Obstacles/@Area2D@19219" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Obstacles/@Area2D@19220" to="Obstacles/@Area2D@19220" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Obstacles/@Area2D@19220" to="Obstacles/@Area2D@19220" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Obstacles/@Area2D@19221" to="Obstacles/@Area2D@19221" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Obstacles/@Area2D@19221" to="Obstacles/@Area2D@19221" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Obstacles/@Area2D@19222" to="Obstacles/@Area2D@19222" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Obstacles/@Area2D@19222" to="Obstacles/@Area2D@19222" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Obstacles/@Area2D@19223" to="Obstacles/@Area2D@19223" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Obstacles/@Area2D@19223" to="Obstacles/@Area2D@19223" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Obstacles/@Area2D@19224" to="Obstacles/@Area2D@19224" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Obstacles/@Area2D@19224" to="Obstacles/@Area2D@19224" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Obstacles/@Area2D@19225" to="Obstacles/@Area2D@19225" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Obstacles/@Area2D@19225" to="Obstacles/@Area2D@19225" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Obstacles/@Area2D@19226" to="Obstacles/@Area2D@19226" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Obstacles/@Area2D@19226" to="Obstacles/@Area2D@19226" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Obstacles/@Area2D@19227" to="Obstacles/@Area2D@19227" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Obstacles/@Area2D@19227" to="Obstacles/@Area2D@19227" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Obstacles/@Area2D@19228" to="Obstacles/@Area2D@19228" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Obstacles/@Area2D@19228" to="Obstacles/@Area2D@19228" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Obstacles/@Area2D@19229" to="Obstacles/@Area2D@19229" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Obstacles/@Area2D@19229" to="Obstacles/@Area2D@19229" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Obstacles/@Area2D@19230" to="Obstacles/@Area2D@19230" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Obstacles/@Area2D@19230" to="Obstacles/@Area2D@19230" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Obstacles/@Area2D@19231" to="Obstacles/@Area2D@19231" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Obstacles/@Area2D@19231" to="Obstacles/@Area2D@19231" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Obstacles/@Area2D@19232" to="Obstacles/@Area2D@19232" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Obstacles/@Area2D@19232" to="Obstacles/@Area2D@19232" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Obstacles/@Area2D@19233" to="Obstacles/@Area2D@19233" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Obstacles/@Area2D@19233" to="Obstacles/@Area2D@19233" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Obstacles/@Area2D@19234" to="Obstacles/@Area2D@19234" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Obstacles/@Area2D@19234" to="Obstacles/@Area2D@19234" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Obstacles/@Area2D@19235" to="Obstacles/@Area2D@19235" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Obstacles/@Area2D@19235" to="Obstacles/@Area2D@19235" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Obstacles/@Area2D@19236" to="Obstacles/@Area2D@19236" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Obstacles/@Area2D@19236" to="Obstacles/@Area2D@19236" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Obstacles/@Area2D@19237" to="Obstacles/@Area2D@19237" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Obstacles/@Area2D@19237" to="Obstacles/@Area2D@19237" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Obstacles/@Area2D@19238" to="Obstacles/@Area2D@19238" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Obstacles/@Area2D@19238" to="Obstacles/@Area2D@19238" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Obstacles/@Area2D@19239" to="Obstacles/@Area2D@19239" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Obstacles/@Area2D@19239" to="Obstacles/@Area2D@19239" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Obstacles/@Area2D@19240" to="Obstacles/@Area2D@19240" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Obstacles/@Area2D@19240" to="Obstacles/@Area2D@19240" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Obstacles/@Area2D@19241" to="Obstacles/@Area2D@19241" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Obstacles/@Area2D@19241" to="Obstacles/@Area2D@19241" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Obstacles/@Area2D@19242" to="Obstacles/@Area2D@19242" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Obstacles/@Area2D@19242" to="Obstacles/@Area2D@19242" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Obstacles/@Area2D@19243" to="Obstacles/@Area2D@19243" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Obstacles/@Area2D@19243" to="Obstacles/@Area2D@19243" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Obstacles/@Area2D@19244" to="Obstacles/@Area2D@19244" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Obstacles/@Area2D@19244" to="Obstacles/@Area2D@19244" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Obstacles/@Area2D@19245" to="Obstacles/@Area2D@19245" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Obstacles/@Area2D@19245" to="Obstacles/@Area2D@19245" method="_on_mouse_exited"]
